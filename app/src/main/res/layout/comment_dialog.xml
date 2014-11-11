@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/comment_bg"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageView"
+        android:onClick="close"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:layout_alignParentTop="true"
+        android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:background="@android:color/black"
+        android:id="@+id/list"
+        android:layout_above="@+id/comment_layout" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:id="@+id/comment_layout"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/comment_box"
+            android:inputType="text"
+            android:imeOptions="actionSend"
+            android:paddingLeft="5dp"
+            android:textColor="#ff414141"
+            android:paddingRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:textSize="18sp"
+            android:hint="COMMENT"
+            android:layout_toLeftOf="@+id/imageView4" />
+
+        <ImageButton
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@android:drawable/ic_menu_send"
+            android:id="@+id/imageView4"
+            android:background="@drawable/post_link_selector"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="3dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

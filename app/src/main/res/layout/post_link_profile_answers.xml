@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:onClick="openQuestion"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:orientation="vertical"
+        android:background="@drawable/post_link_selector">
+
+        <app.meditel.zeteo.StyledTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem_100"
+            android:id="@+id/body"
+            android:fontFamily="sans-serif-condensed"
+            android:padding="5dp"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:paddingLeft="7dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/avotes"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:paddingRight="10dp"
+                android:textColor="#ff007b00"
+                android:textStyle="bold"
+                android:gravity="center|left" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView1"
+                android:src="@drawable/comment" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingRight="10dp"
+                android:layout_height="wrap_content"
+                android:textColor="#333"
+                android:id="@+id/acomments"
+                android:gravity="center|left" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView2"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingRight="10dp"
+                android:gravity="center|left"
+                android:layout_height="match_parent"
+                android:id="@+id/atime"
+                android:textColor="#ff333333" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            android:paddingLeft="7dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/votes"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:paddingRight="10dp"
+                android:textColor="#ff007b00"
+                android:textStyle="bold"
+                android:gravity="center|left" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/answers" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:paddingLeft="3dp"
+                android:layout_height="match_parent"
+                android:paddingRight="10dp"
+                android:gravity="center|left"
+                android:id="@+id/answers"
+                android:textColor="#333" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+
+                android:src="@drawable/comment" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingRight="10dp"
+                android:layout_height="wrap_content"
+                android:textColor="#333"
+                android:id="@+id/comments"
+                android:gravity="center|left" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingRight="10dp"
+                android:gravity="center|left"
+                android:layout_height="match_parent"
+                android:id="@+id/time"
+                android:textColor="#ff333333" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#9fa11c"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:id="@+id/user_name" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/separator" />
+</LinearLayout>

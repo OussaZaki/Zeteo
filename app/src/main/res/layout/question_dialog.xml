@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/comment_bg"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rootview"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:orientation="horizontal"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/rem"
+                android:textColor="#ff9a9a9a"
+                android:text="100"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:onClick="close"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ff333333" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_weight="1"
+            android:id="@+id/body"
+            android:text="@string/lorem_long"
+            android:background="@drawable/text_body_selector"
+            android:padding="10dp"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:hint="Question in full"
+            android:textColor="#ff333333" />
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:id="@+id/view1" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:id="@+id/comment_layout">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="12"
+                android:layout_height="match_parent"
+                android:id="@+id/tags"
+                android:inputType="text"
+                android:imeOptions="actionSend"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:textColor="#ff414141"
+                android:paddingRight="5dp"
+                android:maxLength="50"
+                android:singleLine="true"
+                android:gravity="center|left"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,-"
+                android:background="@null"
+                android:layout_marginLeft="5dp"
+                android:textSize="18sp"
+                android:hint="TAG (at least one)" />
+
+            <include layout="@layout/vertical_separator" />
+
+            <TextView
+                android:text="POST"
+                android:layout_weight="3"
+                android:clickable="true"
+                android:onClick="sendPost"
+                android:layout_width="0dp"
+                android:background="@drawable/button_link_selector"
+                android:id="@+id/send"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#ff414141"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:paddingTop="3dp"
+                android:paddingRight="5dp"
+                android:textSize="18sp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textStyle="bold"
+        android:textColor="#ff333333"
+        android:textSize="50sp"
+        android:id="@+id/anim"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center" />
+</LinearLayout>

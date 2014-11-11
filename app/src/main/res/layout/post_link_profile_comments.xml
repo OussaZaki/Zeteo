@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:clickable="true"
+    android:background="@drawable/post_link_selector">
+
+    <app.meditel.zeteo.StyledTextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="@string/lorem_answer"
+        android:id="@+id/textView"
+        android:maxLines="1"
+        android:padding="5dp"
+        style="@style/autoscroll" />
+
+</LinearLayout>

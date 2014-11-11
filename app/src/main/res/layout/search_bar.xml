@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_alignParentTop="true"
+    android:id="@+id/search_bar"
+    android:background="@drawable/shape"
+    android:layout_height="50dp">
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageView"
+        android:background="@drawable/post_link_selector"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/search"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:background="@drawable/shadow"
+        android:layout_height="3dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/view" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/imageView"
+        android:padding="5dp">
+
+        <app.meditel.zeteo.StyledEditText
+            android:id="@+id/search_box"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:textColor="#ff333333"
+            android:imeOptions="actionSearch"
+            android:hint="SEARCH"
+            android:singleLine="true" />
+
+        <Button
+            android:onClick="showActionBar"
+            android:id="@+id/calc_clear_txt_Prise"
+            android:layout_gravity="right"
+            android:background="@android:drawable/ic_menu_close_clear_cancel"
+            android:layout_height="35dp"
+            android:layout_width="35dp" />
+
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,5 @@
+apply plugin: 'java'
+
+dependencies {
+    compile files('C:/Users/Ali/Desktop/Andr/Zeteo/app/src/main/libs/gcm.jar')
+}

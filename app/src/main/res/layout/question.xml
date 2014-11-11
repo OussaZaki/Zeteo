@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/question"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <app.meditel.zeteo.StyledTextView
+        android:id="@+id/body"
+        android:background="#333333"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#fff5f5f5"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:background="@drawable/shadow"
+        android:layout_height="4dp"
+        />
+
+    <include layout="@layout/separator" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#ffdadada"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="3dp"
+            android:paddingRight="5dp"
+            android:id="@+id/linearLayout2">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:src="@drawable/thumb_up"
+                    android:id="@+id/buttonUp"
+                    android:background="@drawable/thumb_up"
+                    android:onClick="toggleThumb"/>
+
+                <include layout="@layout/vertical_separator" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textAlignment="center"
+                    android:id="@+id/total_votes"
+                    android:textColor="#ff007b00" />
+
+                <include layout="@layout/vertical_separator" />
+                <Button
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:id="@+id/buttonDown"
+                    android:background="@drawable/thumb_down"
+                    android:onClick="toggleThumb"/>
+
+                <include layout="@layout/vertical_separator" />
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:src="@drawable/answers"
+                    android:id="@+id/imageView3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingRight="10dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/answers"
+                    android:gravity="center"
+                    android:textAlignment="center" />
+
+                <include layout="@layout/vertical_separator" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:clickable="true"
+                    android:paddingRight="5dp"
+                    android:onClick="showComment">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:src="@drawable/comment"
+                        android:id="@+id/imageView3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:paddingRight="10dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:id="@+id/comments"
+                        android:gravity="center"
+                        android:textAlignment="center" />
+
+            </LinearLayout>
+
+                <include layout="@layout/vertical_separator" />
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:src="@drawable/clock"
+                    android:id="@+id/cloky" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="10dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:id="@+id/time" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:textColor="#9fa11c"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/user_name"
+                android:textStyle="bold"
+
+                android:layout_centerVertical="true" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_marginTop="7dp"
+            android:layout_width="fill_parent"
+            android:layout_height="5dp"
+            android:background="#333333" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/shadow" />
+    </LinearLayout>
+
+
+</LinearLayout>
